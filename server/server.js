@@ -17,7 +17,7 @@ console.log(process.env.GEMINI_API_KEY )
 app.use(express.json() ) ; 
 app.use(express.static(path.join(__dirname, 'client' ) ) ) ; 
 app.use(cors({ 
-  origin: "http://127.0.0.1:5500", 
+  origin: process.env.FRONTEND_URL, 
   credentials: true 
 } ) ) 
 

@@ -1,4 +1,4 @@
-
+import dotenv from "dotenv" 
 const personas = {
   anshuman: {
     name: "Anshuman Singh",
@@ -29,9 +29,9 @@ const personas = {
   }
 } ; 
 
-// Put your own researched, assignment-specific prompt text here if you want to refine the persona further.
-// The backend also contains the same prompts so the browser never needs to know the API key.
-const apiEndpoint = "http://localhost:8080/api/chat" ; 
+dotenv.config() 
+
+const apiEndpoint = process.env.BACKEND_URL ; 
 
 let activePersona = "anshuman";
 let messages = [];
