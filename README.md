@@ -6,10 +6,10 @@ A simple responsive chat app with three personas:
 - Kshitij Mishra
 
 ## Structure
-- `public/index.html` — UI
-- `public/styles.css` — responsive styling
-- `public/script.js` — persona switching, suggestion chips, chat logic
-- `server.js` — Express + Gemini API proxy
+- `client/index.html` — UI
+- `client/styles.css` — responsive styling
+- `client/script.js` — persona switching, suggestion chips, chat logic
+- `server/server.js` — Express + Gemini API proxy
 - `.env.example` — environment variable template
 
 ## Setup
@@ -34,10 +34,6 @@ A simple responsive chat app with three personas:
    npm start
    ```
 
-5. Open:
-   ```bash
-   http://localhost:3000
-   ```
 
 ## Notes
 - The API key is read on the server from `GEMINI_API_KEY` and is never exposed in the browser.
