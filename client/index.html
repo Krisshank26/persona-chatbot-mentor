@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Persona-Based AI Chatbot</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Scaler / InterviewBit Persona Bot</p>
+        <h1>Chat with three distinct personas</h1>
+        <p class="subtle">
+          Switch between Anshuman Singh, Abhimanyu Saxena, and Kshitij Mishra. Each switch resets the chat and loads a different system prompt.
+        </p>
+      </div>
+
+      <div class="status-card">
+        <span class="status-label">Active persona</span>
+        <strong id="activePersonaName">Anshuman Singh</strong>
+        <p id="activePersonaHint">Founder-style, crisp, and execution-focused.</p>
+      </div>
+    </section>
+
+    <section class="chat-card">
+      <div class="persona-tabs" role="tablist" aria-label="Persona switcher">
+        <button class="persona-tab active" data-persona="anshuman" role="tab">Anshuman Singh</button>
+        <button class="persona-tab" data-persona="abhimanyu" role="tab">Abhimanyu Saxena</button>
+        <button class="persona-tab" data-persona="kshitij" role="tab">Kshitij Mishra</button>
+      </div>
+
+      <div class="chips-row" id="suggestionChips" aria-label="Suggestion chips"></div>
+
+      <div class="chat-window" id="chatWindow" aria-live="polite" aria-label="Chat conversation"></div>
+
+      <div class="typing" id="typingIndicator" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+
+      <form class="composer" id="chatForm">
+        <textarea
+          id="messageInput"
+          rows="2"
+          placeholder="Ask a question..."
+          aria-label="Type your message"
+        ></textarea>
+        <button type="submit" id="sendButton">Send</button>
+      </form> 
+    </section> 
+  </main>
+
+  <script src="script_persona.js"></script>
+</body>
+</html>
