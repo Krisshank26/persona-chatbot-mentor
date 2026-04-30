@@ -24,9 +24,11 @@ A simple responsive chat app with three personas:
    cp .env.example .env
    ```
 
-3. Add your Gemini key to `.env`:
+3. Add your Gemini key, Frontend and Backend URL to `.env`:
    ```bash
-   GEMINI_API_KEY=your_actual_key_here
+   GEMINI_API_KEY=your_actual_key_here 
+   FRONTEND_URL=your_actual_frontend_url 
+   BACKEND_URL=your_actual_backend_url 
    ```
 
 4. Start the server:
