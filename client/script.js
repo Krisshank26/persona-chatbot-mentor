@@ -1,4 +1,3 @@
-import dotenv from "dotenv" 
 const personas = {
   anshuman: {
     name: "Anshuman Singh",
@@ -29,9 +28,7 @@ const personas = {
   }
 } ; 
 
-dotenv.config() 
-
-const apiEndpoint = process.env.BACKEND_URL ; 
+const apiEndpoint = "https://persona-chatbot-mentor.onrender.com/api/chat" 
 
 let activePersona = "anshuman";
 let messages = [];
