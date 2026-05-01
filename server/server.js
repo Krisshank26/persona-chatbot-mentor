@@ -129,12 +129,12 @@ app.post('/api/chat', async (req, res) => {
     }
 
     if (!process.env.GEMINI_API_KEY ) { 
-      return res.status(500).json({ error: 'OPENAI_API_KEY is missing on the server.' });
+      return res.status(500).json({ error: 'GEMINI_API_KEY is missing on the server.' } ) ; 
     } 
 
     // The API key is read from the server environment and never exposed to the browser.
     // The persona-specific system prompt lives here in the backend and is passed through the
-    // `instructions` parameter so each persona can behave differently.
+    // `instructions` parameter so each persona can behave differently . 
     /* const response = await client.responses.create({
       model: 'gpt-5.5',
       reasoning: { effort: 'low' },
