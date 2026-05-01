@@ -161,7 +161,7 @@ app.post('/api/chat', async (req, res) => {
     } 
     
     const response= await client.models.generateContent({ 
-      model: "gemini-3-flash-preview", 
+      model: process.env.MODEL, 
       /* contents: messages.map((msg )=> 
       { 
         const payload= { 
