@@ -13,7 +13,6 @@ dotenv.config()
 
 const port = process.env.PORT || 8080 ; 
 
-console.log(process.env.GEMINI_API_KEY ) 
 app.use(express.json() ) ; 
 app.use(express.static(path.join(__dirname, 'client' ) ) ) ; 
 app.use(cors({ 
